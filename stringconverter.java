@@ -23,7 +23,7 @@ class StringConverter {
 
             summationOfValues = summationOfValues + applyPattern(i);
 
-            if (stringkey.charAt(i) == '>') {
+            if (stringkey.charAt(i) == '<') {
                 continue;
 
             } else if (Character.getNumericValue(stringkey.charAt(i)) == -1) {
@@ -41,8 +41,9 @@ class StringConverter {
     } 
 
     public static void main(String[] args) {  
-        System.out.println(StringConverter.stringconverter("A1B02>23Z+0A5Ñ"));
-        System.out.println(StringConverter.stringconverter("A1B02>23ZT0A5N"));  
+        System.out.println(StringConverter.stringconverter("1<1<1"));
+        System.out.println(StringConverter.stringconverter("A1B02<23Z+0A5Ñ"));
+        System.out.println(StringConverter.stringconverter("A1B02<23ZT0A5N"));  
     }  
 
 }
